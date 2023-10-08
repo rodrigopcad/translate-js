@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title translate-key="Tradução JavaScript"></title>
+    <script src="./i18n/translate.js" defer></script>
+</head>
+
+<body>
+
+    <h1 translate-key="Olá Mundo!"></h1>
+
+    <div>
+        <label for="language-selector" translate-key="Selecione o idioma:"></label>
+        <select id="language-selector" onchange="Translate.setTranslation(this.value)">
+            <option value="pt-br" translate-key="Português"></option>
+            <option value="en-us" translate-key="Inglês"></option>
+        </select>
+    </div>
+
+    <br />
+    <button onclick="location.href='./sample-words/sample-words.html'" translate-key="Amostra de Palavras"></button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            Translate.setSelectedOption();
+        });
+    </script>
+</body>
+
+
+</html>
